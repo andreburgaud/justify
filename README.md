@@ -1,7 +1,7 @@
 # JUSTIFY
 
-* Fully justify ASCII text document.
-* Useful to justify open source licenses document. See examples in this document.
+* Fully justify ASCII documents.
+* Useful to justify open source license documents. See examples in this document.
 
 ## Installation
 
