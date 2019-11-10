@@ -7,10 +7,33 @@
 
 ### Download Script
 
-* You can download the script from https://github.com/andreburgaud/justify/releases/download/0.4.0/justify and copy this executable script to a folder in your PATH
-* Or, you can build it on your machine (see next section).
 
-### Validate - Test - Build
+```
+$ curl -L -O  https://github.com/andreburgaud/justify/releases/download/0.4.0/justify
+$ chmod +x
+$ cp justify <directory_in _path>
+$ justify --help
+$ justify --help
+usage: /home/some_user/bin/justify [OPTIONS] [FILES]...
+
+Fully justify text
+
+positional arguments:
+  files
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -c COLUMNS, --columns COLUMNS
+                        Number of columns (default: 80)
+  -l, --license         Display the license
+  -s, --shuffle         Spread whitespace separators randomly on each line
+                        (default: true)
+  -v, --version         show program's version number and exit
+```
+
+### Clone Repo
+
+Another option is to clone the repo and use the included Makefile:
 
 ```
 $ https://github.com/andreburgaud/justify.git
@@ -18,6 +41,7 @@ $ cd justify
 $ make release
 $ cp justify <directory_in_path>
 $ justify --help
+...
 ```
 
 ## Usage
