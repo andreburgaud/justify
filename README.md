@@ -13,7 +13,6 @@ $ curl -L -O  https://github.com/andreburgaud/justify/releases/download/0.4.0/ju
 $ chmod +x
 $ cp justify <directory_in _path>
 $ justify --help
-$ justify --help
 usage: /home/some_user/bin/justify [OPTIONS] [FILES]...
 
 Fully justify text
