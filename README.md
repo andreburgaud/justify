@@ -11,7 +11,7 @@
 ```
 $ curl -L -O  https://github.com/andreburgaud/justify/releases/download/0.4.0/justify
 $ chmod +x
-$ cp justify <directory_in _path>
+$ cp justify <directory_in_path>
 $ justify --help
 usage: /home/some_user/bin/justify [OPTIONS] [FILES]...
 
