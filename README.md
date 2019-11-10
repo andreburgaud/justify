@@ -1,8 +1,23 @@
-# README
+# JUSTIFY
+
+* Fully justify ASCII text document.
+* Useful to justify open source licenses document. See examples in this document.
 
 ## Installation
 
+### Download Script
 
+You can download the script from: https://github.com/andreburgaud/justify/releases/download/0.4.0/justify, or build it on your machine (see next section).
+
+### Validate - Test - Build
+
+```
+$ https://github.com/andreburgaud/justify.git
+$ cd justify
+$ make release
+$ cp justify <directory_in_path>
+$ justify --help
+```
 
 ## Usage
 
