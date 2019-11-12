@@ -28,7 +28,6 @@ optional arguments:
                         Number of columns (default: 80)
   -l, --license         Display the license
   -s, --shuffle         Spread whitespace separators randomly on each line
-                        (default: true)
   -v, --version         show program's version number and exit
 ```
 
