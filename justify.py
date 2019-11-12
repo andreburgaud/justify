@@ -175,7 +175,7 @@ def init_argparse() -> argparse.ArgumentParser:
     parser.add_argument(
         "-s",
         "--shuffle",
-        help="Spread whitespace separators randomly on each line (default: true)",
+        help="Spread whitespace separators randomly on each line",
         action="store_true",
         default=False,
     )
