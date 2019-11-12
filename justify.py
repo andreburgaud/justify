@@ -11,7 +11,7 @@ import re
 import sys
 import textwrap
 
-VERSION = "0.5.0"
+VERSION = "0.5.1"
 
 LICENSE = """
 Copyright 2019 Andre Burgaud
@@ -106,7 +106,8 @@ def justify(text: str, shuffle: bool = True, columns: int = 80) -> str:
         new_lines = []
 
         for line in lines[:-1]:  # Don't justify the last line
-            if (len_line := len(line)) == columns:
+            len_line = len(line)
+            if len_line == columns:
                 # Line already expected length
                 # Prevents ZeroDivisionError in divmod
                 new_lines.append(line)
