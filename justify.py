@@ -11,7 +11,7 @@ import re
 import sys
 import textwrap
 
-VERSION = "0.6.0"
+VERSION = "0.7.0"
 
 LICENSE = """
 Copyright 2019 Andre Burgaud
@@ -156,9 +156,7 @@ def init_argparse() -> argparse.ArgumentParser:
     """Initialize the argument parser"""
 
     parser = argparse.ArgumentParser(
-        prog=sys.argv[0],
-        usage="%(prog)s [OPTIONS] [FILES]...",
-        description="Fully justify text",
+        usage="%(prog)s [OPTIONS] [FILES]...", description="Fully justify text",
     )
     parser.add_argument(
         "-c",
