@@ -3,6 +3,7 @@
 .DEFAULT_GOAL := help
 
 SOURCE := justify.py
+PYTHON := python3
 
 lint:
 	pylint $(SOURCE)
@@ -17,6 +18,7 @@ build: type fmt lint
 
 release: build
 	echo "#!/usr/bin/python" > justify
+	echo "" >> justify
 	cat justify.py >> justify
 	chmod +x justify
 
@@ -24,7 +26,7 @@ clean:
 	rm $(EXE) || true
 
 test:
-	python test_justify.py -v
+	$(PYTHON) test_justify.py -v
 help:
 	@echo 'Makefile for $(EXE) (Links checker and Site Map Genarator)'
 	@date

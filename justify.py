@@ -11,7 +11,7 @@ import re
 import sys
 import textwrap
 
-VERSION = "0.4.0"
+VERSION = "0.5.0"
 
 LICENSE = """
 Copyright 2019 Andre Burgaud
@@ -106,13 +106,17 @@ def justify(text: str, shuffle: bool = True, columns: int = 80) -> str:
         new_lines = []
 
         for line in lines[:-1]:  # Don't justify the last line
+            if (len_line := len(line)) == columns:
+                # Line already expected length
+                # Prevents ZeroDivisionError in divmod
+                new_lines.append(line)
+                continue
             sep_count = line.count(" ")
             words = line.split()
-            missing_spaces = columns - len(line)
+            missing_spaces = columns - len_line
             space_count, padding_count = divmod(missing_spaces, sep_count)
             separators = get_separators(space_count, sep_count, padding_count, shuffle)
-            new_line = interleave(words, separators)
-            new_lines.append(new_line)
+            new_lines.append(interleave(words, separators))
 
         new_lines.append(lines[-1])  # Add the non justified last line
         justified_sections.append("\n".join(new_lines))
