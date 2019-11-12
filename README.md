@@ -3,6 +3,8 @@
 * Fully justify ASCII documents.
 * Useful to justify open source license documents. See examples in this document.
 
+![Justify in Action](https://user-images.githubusercontent.com/6396088/68637452-4b33ab80-04c4-11ea-9f85-aaa78b85d06a.gif)
+
 ## Installation
 
 ### Download Script
