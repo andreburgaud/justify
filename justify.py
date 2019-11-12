@@ -11,7 +11,7 @@ import re
 import sys
 import textwrap
 
-VERSION = "0.5.1"
+VERSION = "0.6.0"
 
 LICENSE = """
 Copyright 2019 Andre Burgaud
