@@ -112,3 +112,18 @@ Justify the Apache 2.0 license from a URL (70 columns, shuffling padding):
 ```
 $ curl https://api.github.com/licenses/apache-2.0 | jq -r .body | justify -c 70 -s
 ```
+
+## Development
+
+To check the tasks included in the Makefile, execute:
+
+```
+$ make help
+...
+```
+
+Some `Makefile` tasks, `build` and `release-build`, require the availibity of the following tools on your system:
+
+* https://pypi.org/project/black/ Black - Python code formatter
+* https://www.pylint.org/ Pylint - Python linter
+* http://mypy-lang.org/ Mypy - Python optional static type checker
