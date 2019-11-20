@@ -1,7 +1,7 @@
 # JUSTIFY
 
 * Fully justify ASCII documents.
-* Useful to justify open source license documents. See examples in this document.
+* Useful to justify open source license documents:
 
 ![Justify in Action](https://user-images.githubusercontent.com/6396088/68637452-4b33ab80-04c4-11ea-9f85-aaa78b85d06a.gif)
 
@@ -89,7 +89,7 @@ Justify a file text to a default width of 80 columns with shuffling the padding 
 $ justify -s some_file.txt
 ```
 
-Without any arguments, justify.py reads content from the standard input. To indicate the end of file, enter CTRL+D on Linux/Unix and CTRL+Z on Windows, followed by [Enter],
+Without any arguments, justify.py reads content from the standard input. To indicate the end of file, enter `CTRL+D` on Linux/Unix and `CTRL+Z` on Windows, followed by `[Enter]`,
 
 To read a document from a URL, use `curl` or `wget`. Here are a few examples:
 
