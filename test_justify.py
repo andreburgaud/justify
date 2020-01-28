@@ -28,6 +28,30 @@ sint  occaecat  cupidatat  non  proident,  sunt in
 culpa  qui  officia  deserunt  mollit  anim id est
 laborum."""
 
+LOREM_IPSUM_100_ZDE = """\
+Loremipsumdolorsitametconsecteturadipiscingelitseddoeiusmodtemporincididuntutlab
+ore et  dolore  magna aliqua. Ut enim ad minim veniam,
+quis  nostrud exercitation ullamco laboris nisi ut
+aliquip  ex  ea commodo consequat. Duis aute irure
+dolor  in  reprehenderit  in  voluptate velit esse
+cillum  dolore eu fugiat nulla pariatur. Excepteur
+sint  occaecat  cupidatat  non  proident,  sunt in
+culpa  qui  officia  deserunt  mollit  anim id est
+laborum."""
+
+LOREM_IPSUM_LONG_URL_ZDE = """\
+Lorem ipsum dolor sit amet, consectetur adipiscing
+elit,  sed  do eiusmod tempor incididunt ut labore
+et  dolore  magna aliqua. Ut enim ad minim veniam,
+quis  nostrud exercitation ullamco laboris nisi ut
+aliquip  ex  ea commodo consequat. Duis aute irure
+dolor  in  reprehenderit  in  voluptate velit esse
+https://www.example.com/:w:/p/conanthebarbaria/ET35mABuneBNiPXVvqq_dl8Bo_RDoji-RnctWnmf6oplTA?e=joQWLS
+cillum  dolore eu fugiat nulla pariatur. Excepteur
+sint  occaecat  cupidatat  non  proident,  sunt in
+culpa  qui  officia  deserunt  mollit  anim id est
+laborum."""
+
 class JustifyTest(unittest.TestCase):
     """Main Justify test case"""
 
@@ -80,6 +104,13 @@ class JustifyTest(unittest.TestCase):
         expected_first_line = "Lorem_ipsum_dolor_sit_amet,_co"
         assert expected_first_line == justified_text.split()[0]
 
+    def test_justify_line_long_url(self):
+        """Justify: long url"""
+
+        # Zero division Error in version 0.7.0 when no space in a long line
+        justified_text = justify.justify(LOREM_IPSUM_LONG_URL_ZDE, shuffle=False, columns=50)
+        expected_first_line = "Lorem ipsum dolor sit amet, consectetur adipiscing"
+        assert expected_first_line == justified_text.split('\n')[0]
 
 if __name__ == "__main__":
     unittest.main()  # run all tests

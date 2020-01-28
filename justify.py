@@ -11,10 +11,10 @@ import re
 import sys
 import textwrap
 
-VERSION = "0.7.0"
+VERSION = "0.8.0"
 
 LICENSE = """
-Copyright 2019 Andre Burgaud
+Copyright 2019-2020 Andre Burgaud
 
 Permission is hereby granted, free  of charge, to any person obtaining a copy of
 this software and associated documentation  files (the "Software"),  to  deal in
@@ -107,12 +107,10 @@ def justify(text: str, shuffle: bool = True, columns: int = 80) -> str:
 
         for line in lines[:-1]:  # Don't justify the last line
             len_line = len(line)
-            if len_line == columns:
-                # Line already expected length
-                # Prevents ZeroDivisionError in divmod
+            sep_count = line.count(" ")
+            if not sep_count:  # Divide by zero if sep_count is 0
                 new_lines.append(line)
                 continue
-            sep_count = line.count(" ")
             words = line.split()
             missing_spaces = columns - len_line
             space_count, padding_count = divmod(missing_spaces, sep_count)
