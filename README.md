@@ -12,7 +12,7 @@
 
 ```
 $ curl -L -O  https://github.com/andreburgaud/justify/releases/download/0.8.0/justify
-$ chmod +x
+$ chmod +x justify
 $ cp justify <directory_in_path>
 $ justify --help
 usage: justify [OPTIONS] [FILES]...
