@@ -11,10 +11,10 @@ import re
 import sys
 import textwrap
 
-VERSION = "0.8.0"
+VERSION = "0.9.0"
 
 LICENSE = """
-Copyright 2019-2020 Andre Burgaud
+Copyright 2019-2021 Andre Burgaud
 
 Permission is hereby granted, free  of charge, to any person obtaining a copy of
 this software and associated documentation  files (the "Software"),  to  deal in
@@ -131,8 +131,8 @@ def read_stdin() -> str:
         for line in sys.stdin:
             data.append(line)
         return "".join(data)
-    except KeyboardInterrupt:
-        raise SystemExit("")
+    except KeyboardInterrupt as kbi:
+        raise SystemExit from kbi
 
 
 def read_file(filename: str) -> str:
@@ -154,7 +154,8 @@ def init_argparse() -> argparse.ArgumentParser:
     """Initialize the argument parser"""
 
     parser = argparse.ArgumentParser(
-        usage="%(prog)s [OPTIONS] [FILES]...", description="Fully justify text",
+        usage="%(prog)s [OPTIONS] [FILES]...",
+        description="Fully justify text",
     )
     parser.add_argument(
         "-c",
@@ -166,7 +167,10 @@ def init_argparse() -> argparse.ArgumentParser:
         type=int,
     )
     parser.add_argument(
-        "-l", "--license", help="Display the license", action="store_true",
+        "-l",
+        "--license",
+        help="Display the license",
+        action="store_true",
     )
     parser.add_argument(
         "-s",

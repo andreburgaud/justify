@@ -19,7 +19,7 @@ build: test type fmt lint
 release-build: clean build release
 
 release:
-	echo "#!/usr/bin/python" > justify
+	echo "#!/usr/bin/env python3" > justify
 	echo "" >> justify
 	cat justify.py >> justify
 	chmod +x justify
@@ -29,6 +29,7 @@ clean:
 
 test:
 	$(PYTHON) test_justify.py -v
+
 help:
 	@echo 'Makefile for $(EXE) (Links checker and Site Map Genarator)'
 	@date
@@ -40,5 +41,3 @@ help:
 	@echo '    make test            Execute all tests'
 	@echo '    make help            Display this help message'
 	@echo
-
-.PHONY: lint fmt type build release clean test help

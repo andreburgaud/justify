@@ -11,7 +11,7 @@
 
 
 ```
-$ curl -L -O  https://github.com/andreburgaud/justify/releases/download/0.8.0/justify
+$ curl -L -O  https://github.com/andreburgaud/justify/releases/download/0.9.0/justify
 $ chmod +x justify
 $ cp justify <directory_in_path>
 $ justify --help
